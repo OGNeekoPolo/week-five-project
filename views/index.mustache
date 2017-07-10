@@ -9,7 +9,11 @@
 <body>
   <header>
     <h5>TIY Word Game</h5>
-    <h5>You have {{tries}} guesses left</h5>
+    <h5>You have guesses left</h5>
   </header>
+  <form action="/guess" method="post">
+    <input type="text" name="guessedLetter">
+    <button type="submit" name="guessButton">Guess Letter</button>
+  </form>
 </body>
 </html>
