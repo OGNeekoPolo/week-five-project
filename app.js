@@ -1,7 +1,7 @@
 const express = require('express');
 const Router = require('./routes/routes');
-const bodyParser = require('body-parser');
 const session = require('express-session');
+const bodyParser = require('body-parser');
 const expressValidator = require('express-validator');
 const mustacheExpress = require('mustache-express');
 
@@ -19,10 +19,11 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(expressValidator());
 
 app.use(session({
-  secret: 'keyboard cat',
-  resave: false,
-  saveUninitialized: true
+    secret: 'keyboard cat',
+    resave: false,
+    saveUninitialized: true
 }));
+
 
 app.use('/', Router);
 
